@@ -64,19 +64,20 @@ public class TextBoxTest {
         String permanentAddress = permanentAddressOutput.getText();
 
         // выводим в консоль все элементы
-        System.out.println("Name: " + name + ", email: "
-                        + email + ", current Address: " + currentAddress + ", permanent addres: " + permanentAddress);
+        System.out.println(name + "; " + email + "; " + currentAddress + "; " + permanentAddress);
 
-        // Проверка теста
-        // Assert.assertTrue(name.contains("Svetlana"), "message");
+        // Проверка корректности тестируемого кода (соответствует ли фактический результат выполнения кода ожидаемому)
+        Assert.assertTrue(name.contains("Svetlana"), "message");
         Assert.assertEquals(email, "Email:sveta51151378@yandex.ru");
 
     }
-    @Test // обновить страницу
+
+    @Test //получить заголовок страницы
     public void checkTitleTextBox() {
-        String pageTitle = driver.getTitle(); //
-        System.out.println("Title : " + pageTitle);
+        String pageTitle = driver.getTitle();
+        System.out.println("Title: " + pageTitle);
     }
+
 
 }
 

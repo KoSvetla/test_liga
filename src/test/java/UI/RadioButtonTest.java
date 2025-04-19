@@ -29,13 +29,14 @@ public class RadioButtonTest {
         driver.quit();
     }
 
-   @Test
+   @Test(description = "перейти на страницу с РадиоБаттон и отметить радиобаттон 'Yes'")
    public void step_01() {
        driver.get("https://demoqa.com/radio-button");
 
-       WebElement yesRadioButton = driver.findElement(By.xpath("//input[@type='radio']/following-sibling::label[contains(.,'Yes')]"));
-       JavascriptExecutor js = (JavascriptExecutor) driver; // исполнение кода на JS
-       js.executeScript("arguments[0].scrollIntoView();",yesRadioButton );
+       WebElement yesRadioButton = driver.findElement(By.xpath
+               ("//input[@type='radio']/following-sibling::label[contains(.,'Yes')]"));
+       JavascriptExecutor js = (JavascriptExecutor) driver;
+       js.executeScript("arguments[0].scrollIntoView();",yesRadioButton);
        yesRadioButton.click();
 
        WebElement successElement = driver.findElement(By.xpath("//span[@class='text-success']"));
@@ -47,9 +48,21 @@ public class RadioButtonTest {
        } catch (InterruptedException e) {
            throw new RuntimeException(e);
        }
-//       WebElement successElement = driver.findElement(By.xpath("//span[@class='text-success']"));
-//       String successElementText = successElement.getText();
-
-//       Assert.assertEquals();
+       // проверка, что выводится Yes
+         Assert.assertEquals(succusessElementText, "Yes");
    }
+   @Test(description = "Отметить радиобаттон'Impressive'")
+    public void step_02() {
+       WebElement impressiveRadioButton = driver.findElement(By.xpath
+               ("//input[@type='radio']/following-sibling::label[contains(.,'Impressive')]"));
+       JavascriptExecutor js = (JavascriptExecutor) driver;
+       js.executeScript("arguments[0].scrollIntoView();",impressiveRadioButton);
+       impressiveRadioButton.click();
+
+       WebElement successElement = driver.findElement(By.xpath("//span[@class='text-success']"));
+       String succusessElementText = successElement.getText();
+       Assert.assertEquals(succusessElementText, "Impressive");
+    }
 }
+
+
