@@ -1,21 +1,18 @@
 package UI;
 
-import browser.Browser;
-import org.openqa.selenium.WebDriver;
+import base.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.demoqa.CheckBoxPage;
 
-public class CheckBoxTest {
-    WebDriver driver;
+public class CheckBoxTest extends BaseTest {
     // импортируем экземпляр страницы
     private CheckBoxPage checkBoxPage;
 
     @BeforeClass
     // инициализируем драйвер
     public void setup(){
-        driver = Browser.createDriver();
         checkBoxPage = new CheckBoxPage(driver);
     }
     @Test

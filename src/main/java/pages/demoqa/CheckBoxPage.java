@@ -62,7 +62,7 @@ import pages.base.BasePage;
         return isElementDisplay(By.xpath(String.format(CHECK_BOX_XPATH, checkBoxName)));
     }
     /**
-     * Проверка , что не отображаются внутренние чекбоксы
+     * Проверка, что не отображаются внутренние чекбоксы
      * @param checkBoxName название чек-бокса
      * @return true если не отображается
      */

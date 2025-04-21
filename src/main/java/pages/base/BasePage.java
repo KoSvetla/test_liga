@@ -69,7 +69,7 @@ public class BasePage {
     public void failure() {
         throw new AssertionError();
     }
-// проверка отображения элементта на странице
+// проверка отображения элемента на странице
     public boolean isElementDisplay(By locator){
         try{
             return findElement(locator).isDisplayed();
