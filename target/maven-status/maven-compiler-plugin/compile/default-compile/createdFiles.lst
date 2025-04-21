@@ -1,7 +1,0 @@
-pages\demoqa\CheckBoxPage.class
-org\example\Main.class
-browser\Config.class
-pages\base\BasePage.class
-browser\Browser.class
-pages\demoqa\DatePickerPage.class
-org\example\Cat.class
