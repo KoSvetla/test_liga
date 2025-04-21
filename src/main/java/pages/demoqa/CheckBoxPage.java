@@ -10,7 +10,7 @@ public class CheckBoxPage extends BasePage {
         super(driver);
     }
 
-    public static final String URL_TEXT_BOX_PAGE = "https://demoqa.com/checkbox";
+    public static final String URL_CHECK_BOX_PAGE = "https://demoqa.com/checkbox";
 
     /**
      * Локатор до Input элемента чекбокса
@@ -38,7 +38,7 @@ public class CheckBoxPage extends BasePage {
      * Открыть страницу с элементами "Check Box"
      */
     public void openCheckBoxPage(){
-        openUrl(URL_TEXT_BOX_PAGE);
+        openUrl(URL_CHECK_BOX_PAGE);
     }
 
     /**

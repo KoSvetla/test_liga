@@ -18,14 +18,12 @@ public class BasePage {
     }
 
     /**
-     * Локатор до названия страницы в средней части страницы
-     */
+     * Локатор до названия страницы в средней части страницы*/
     private static final By NAME_PAGE = By.xpath("//h1[@class='text-center']");
 
     /**
      * Перейти по url
-     * @param url ссылка в формате строки
-     */
+     * @param url ссылка в формате строки*/
     public void openUrl(String url) {
         driver.get(url);
     }
@@ -33,8 +31,7 @@ public class BasePage {
     /**
      * Найти элемент на странице
      * @param locator путь до элемента, тип - By
-     * @return element
-     */
+     * @return element*/
     public WebElement findElement(By locator) {
         WebElement element = driver.findElement(locator);
         JavascriptExecutor js = (JavascriptExecutor) driver;
