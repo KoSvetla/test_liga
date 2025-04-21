@@ -41,16 +41,19 @@ public class TextBoxPage extends BasePage {
     }
 
     public String getName(){
-       return getText(By.xpath(USER_NAME_OUTPUT));
+
+        return getText(By.xpath(USER_NAME_OUTPUT));
     }
     public String getEmail(){
-         return getText(By.xpath(USER_EMAIL_OUTPUT));
+
+        return getText(By.xpath(USER_EMAIL_OUTPUT));
     }
     public String getCurrentAddress(){
         return getText(By.xpath(CURRENT_ADDRESS_OUTPUT));
     }
     public String  getPermanentAddress(){
-         return getText(By.xpath(PERMANENT_ADDRESS_OUTPUT));
+
+        return getText(By.xpath(PERMANENT_ADDRESS_OUTPUT));
     }
 
 }
